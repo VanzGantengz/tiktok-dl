@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body oncopy="return false" oncut="return false" style="background-color:#fafdfb">Tiktok Downloader<br><br>
+  <div>
+    <label class="form-label" for="link">
+      URL
+    </label>
+    <input type="text" class="form-control" placeholder="paste here" required id="link" name="link">
+  </div>
+  <br>
+  <div>
+    <button onclick="donloadmp4()" type="submit">VIDEO</button>
+  </div>
+  <br>
+  <div>
+    <button onclick="donloadmp3()" type="submit">AUDIO</button>
+  </div>
+  
+  <script>
+     function donloadmp4() {
+         if (!/tiktok/.test(link.value)) return alert('Masukkan link')
+         location.href = "http://ivanz.herokuapp.com/api/tiktok?url="+encodeURIComponent(link.value)+"&type=mp4"
+     }
+     function donloadmp3() {
+         if (!/tiktok/.test(link.value)) return alert('Masukkan link')
+         location.href = "http://ivanz.herokuapp.com/api/tiktok?url="+encodeURIComponent(link.value)+"&type=mp3"
+     }  
+  </script>
+</body>
