@@ -28,11 +28,11 @@
   <script>
      function donloadmp4() {
          if (!/tiktok/.test(link.value)) return alert('Masukkan link')
-         location.href = "http://ivanz.herokuapp.com/api/tiktok?url="+encodeURIComponent(link.value)+"&type=mp4"
+         location.href = "http://ivanz.herokuapp.com/api/tiktok?url="+decodeURIComponent(encodeURIComponent(link.value))+"&type=mp4"
      }
      function donloadmp3() {
          if (!/tiktok/.test(link.value)) return alert('Masukkan link')
-         location.href = "http://ivanz.herokuapp.com/api/tiktok?url="+encodeURIComponent(link.value)+"&type=mp3"
+         location.href = "http://ivanz.herokuapp.com/api/tiktok?url="+decodeURIComponent(encodeURIComponent(link.value))+"&type=mp3"
      }  
   </script>
 </body>
